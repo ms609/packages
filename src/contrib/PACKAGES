@@ -11,12 +11,10 @@ NeedsCompilation: yes
 Package: TreeDist
 Version: 1.0.0
 Depends: R (>= 3.4.0), stats
-Imports: ape (>= 5.0), colorspace, memoise, phangorn (>= 2.2.1), TreeTools (>=
-         1.0.0)
+Imports: ape (>= 5.0), colorspace, memoise, phangorn (>= 2.2.1), TreeTools (>= 1.0.0)
 LinkingTo: Rcpp
-Suggests: bookdown, cluster, kdensity, knitr, MASS, Quartet, rmarkdown, Rcpp,
-         Rdpack, testthat, Ternary (>= 1.1.2), TreeDistData (> 0.1.0),
-         TreeSearch, vdiffr
+Suggests: bookdown, cluster, kdensity, knitr, MASS, Quartet, rmarkdown, Rcpp, Rdpack,
+         testthat, Ternary (>= 1.1.2), TreeDistData (> 0.1.0), TreeSearch, vdiffr
 License: GPL (>= 3)
 MD5sum: bcec8c3dc5f66d015dd61de859fbd0cc
 NeedsCompilation: yes
@@ -26,8 +24,18 @@ Version: 1.0.0
 Depends: R (>= 3.5.0)
 Imports: Quartet, TBRDist, TreeDist, TreeTools (>= 0.1.4)
 Suggests: ape, benchmarkme, binom, bookdown, colorspace, kdensity, knitr, MASS,
-         microbenchmark, phangorn (> 2.5.5), Rdpack, rmarkdown, spatstat,
-         testthat, TreeSearch (>= 0.4.0)
+         microbenchmark, phangorn (> 2.5.5), Rdpack, rmarkdown, spatstat, testthat,
+         TreeSearch (>= 0.4.0)
 License: GPL (>= 3)
 MD5sum: fd6ec8ba13abd379a69f21cfa556d3a4
 NeedsCompilation: no
+
+Package: TreeTools
+Version: 1.0.0.9000
+Depends: R (>= 3.4.0), ape (>= 5.0)
+Imports: bit64, colorspace, phangorn (>= 2.2.1), R.cache
+LinkingTo: Rcpp
+Suggests: knitr, Rcpp, Rdpack, rmarkdown, shiny, testthat
+License: GPL (>= 3)
+MD5sum: bff3f6a6d8631a138f85a7f33ce8fdfa
+NeedsCompilation: yes
