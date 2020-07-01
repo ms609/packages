@@ -1,6 +1,6 @@
 Package: TBRDist
 Version: 1.0.0
-Depends: R (>= 3.4.0),
+Depends: R (>= 3.4.0)
 Imports: ape, TreeDist, TreeTools
 LinkingTo: BH, Rcpp
 Suggests: knitr, Rdpack, rmarkdown, testthat
