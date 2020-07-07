@@ -2,7 +2,7 @@ Package: phangorn
 Version: 2.6.0.0
 Depends: R (>= 3.6.0), ape (>= 5.0)
 Imports: quadprog, igraph (>= 1.0), Matrix, parallel, methods, utils, stats,
-         graphics, grDevices, fastmatch, magrittr, Rcpp (>= 0.12.0)
+        graphics, grDevices, fastmatch, magrittr, Rcpp (>= 0.12.0)
 LinkingTo: Rcpp
 Suggests: tinytest, seqinr, xtable, rgl, knitr, rmarkdown, Biostrings
 License: GPL (>= 2)
@@ -10,45 +10,45 @@ MD5sum: 52ef9084a5a9e013ffb3c7f1b5db09ed
 NeedsCompilation: yes
 
 Package: TBRDist
-Version: 1.0.0
+Version: 1.0.1
 Depends: R (>= 3.4.0)
-Imports: ape, TreeDist, TreeTools
+Imports: ape, TreeDist, TreeTools (>= 1.1.0)
 LinkingTo: BH, Rcpp
 Suggests: knitr, Rdpack, rmarkdown, testthat
 License: GPL (>= 3)
-MD5sum: 80c2e243b4ed81e21ab81a4be8c60b44
+MD5sum: a214274fb1e6d4a3ddcbcfe365cfa1dd
 NeedsCompilation: yes
 
 Package: TreeDist
-Version: 1.0.0
+Version: 1.1.0
 Depends: R (>= 3.4.0), stats
 Imports: ape (>= 5.0), colorspace, memoise, phangorn (>= 2.2.1), TreeTools (>=
-         1.0.0)
+        1.1.0)
 LinkingTo: Rcpp
 Suggests: bookdown, cluster, kdensity, knitr, MASS, Quartet, rmarkdown, Rcpp,
-         Rdpack, testthat, Ternary (>= 1.1.2), TreeDistData (> 0.1.0),
-         TreeSearch, vdiffr
+        Rdpack, testthat, Ternary (>= 1.1.2), TreeDistData (> 0.1.0),
+        TreeSearch, vdiffr
 License: GPL (>= 3)
-MD5sum: bcec8c3dc5f66d015dd61de859fbd0cc
+MD5sum: f1629d2cd3c45e7e2a64a853ede5e06a
 NeedsCompilation: yes
 
 Package: TreeDistData
-Version: 1.0.0
+Version: 1.1.0
 Depends: R (>= 3.5.0)
-Imports: Quartet, TBRDist, TreeDist, TreeTools (>= 0.1.4)
-Suggests: ape, benchmarkme, binom, bookdown, colorspace, kdensity, knitr, MASS,
-         microbenchmark, phangorn (> 2.5.5), Rdpack, rmarkdown, spatstat,
-         testthat, TreeSearch (>= 0.4.0)
+Imports: Quartet, TBRDist, TreeDist (> 1.0.0), TreeTools (>= 1.1.0)
+Suggests: ape, benchmarkme, binom, bookdown, colorspace, DT, kdensity, knitr,
+        MASS, microbenchmark, phangorn (>= 2.5.5), Rdpack, rmarkdown,
+        spatstat, testthat, TreeSearch (>= 0.4.0)
 License: GPL (>= 3)
-MD5sum: fd6ec8ba13abd379a69f21cfa556d3a4
+MD5sum: 88668ec9a1b6797ef650814b7470c063
 NeedsCompilation: no
 
 Package: TreeTools
-Version: 1.0.0.9000
+Version: 1.1.0.9000
 Depends: R (>= 3.4.0), ape (>= 5.0)
 Imports: bit64, colorspace, phangorn (>= 2.2.1), R.cache
 LinkingTo: Rcpp
 Suggests: knitr, Rcpp, Rdpack, rmarkdown, shiny, testthat
 License: GPL (>= 3)
-MD5sum: bff3f6a6d8631a138f85a7f33ce8fdfa
+MD5sum: 91a8cd13d38346f14fa6380180f246f9
 NeedsCompilation: yes
