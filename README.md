@@ -9,3 +9,5 @@ Add packages using
 ```r
 drat::insertPackage('path/to/PACKAGENAME_1.0.0.tar.gz', 'path/to/packages')
 ```
+
+On new N.X releases of R, add a blank `PACKAGES` file to each folder in `bin`.
