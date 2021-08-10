@@ -20,6 +20,16 @@ License: GPL (>= 2)
 MD5sum: 52ef9084a5a9e013ffb3c7f1b5db09ed
 NeedsCompilation: yes
 
+Package: Rogue
+Version: 1.0.0.9005
+Depends: R (>= 3.5.0)
+Imports: ape (>= 5.0), cli (>= 3.0), fastmatch, grDevices, matrixStats, Rdpack (>= 0.7),
+         Rfast, stats, TreeDist (>= 2.1.1), TreeTools (>= 1.4.5.9000), utils,
+Suggests: testthat,
+License: GPL (>= 3)
+MD5sum: 7fd4aa0abcae5f514a52cf9ace64e848
+NeedsCompilation: yes
+
 Package: TBRDist
 Version: 1.0.0
 Depends: R (>= 3.4.0)
