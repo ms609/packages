@@ -23,8 +23,8 @@ NeedsCompilation: yes
 Package: Rogue
 Version: 1.0.0.9005
 Depends: R (>= 3.5.0)
-Imports: ape (>= 5.0), cli (>= 3.0), fastmatch, grDevices, matrixStats, Rdpack (>= 0.7),
-         Rfast, stats, TreeDist (>= 2.1.1), TreeTools (>= 1.4.5.9000), utils,
+Imports: ape (>= 5.0), cli (>= 3.0), fastmatch, grDevices, matrixStats, Rdpack (>=
+         0.7), Rfast, stats, TreeDist (>= 2.1.1), TreeTools (>= 1.4.5.9000), utils,
 Suggests: testthat,
 License: GPL (>= 3)
 MD5sum: 7fd4aa0abcae5f514a52cf9ace64e848
@@ -122,4 +122,24 @@ LinkingTo: Rcpp
 Suggests: knitr, Rcpp, rmarkdown, shiny, testthat, vdiffr
 License: GPL (>= 3)
 MD5sum: 13ce66a50b0fcb1a809d4c9ec2978403
+NeedsCompilation: yes
+
+Package: TreeTools
+Version: 1.4.5.9007
+Depends: R (>= 3.4.0), ape (>= 5.0),
+Imports: bit64, colorspace, fastmatch, phangorn (>= 2.2.1), R.cache, Rdpack,
+LinkingTo: Rcpp
+Suggests: knitr, Rcpp, rmarkdown, shiny, testthat (>= 3.0), vdiffr (>= 1.0.0),
+License: GPL (>= 3)
+MD5sum: 60e9ffeed41a469162b284997c02d0ec
+NeedsCompilation: yes
+
+Package: TreeTools
+Version: 1.4.5.9107
+Depends: R (>= 3.4.0), ape (>= 5.0),
+Imports: bit64, lifecycle, colorspace, fastmatch, phangorn (>= 2.2.1), R.cache, Rdpack
+LinkingTo: Rcpp
+Suggests: knitr, Rcpp, rmarkdown, shiny, testthat (>= 3.0), vdiffr (>= 1.0.0),
+License: GPL (>= 3)
+MD5sum: 8d1633602c31b2abc9448bb8c8743f33
 NeedsCompilation: yes
