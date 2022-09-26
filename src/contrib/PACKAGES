@@ -15,6 +15,15 @@ License: GPL (>= 2)
 MD5sum: 622afd35702c45ad010c106af2457458
 NeedsCompilation: no
 
+Package: palec
+Version: 0.0.0.9000
+Depends: R (>= 3.4.0)
+Imports: moments, readxl, shiny, shinyjs, Ternary,
+Suggests: covr, testthat,
+License: GPL-3
+MD5sum: 56bfb3ac54d643c508702cc13a615ee6
+NeedsCompilation: no
+
 Package: phangorn
 Version: 2.6.0.0
 Depends: R (>= 3.6.0), ape (>= 5.0)
