@@ -19,6 +19,13 @@ jobs:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
+      - name: Update git
+        run: |
+          apt update
+          apt install -y git
+          git --version
+          
+    
       - uses: actions/checkout@v3
         repository: ms609/packages
 
