@@ -20,9 +20,10 @@ jobs:
     steps:
       - name: Update git
         run: |
-          apt update
-          apt install -y git
           git --version      
+          apt-get update
+          apt-get install -y git
+          git --version
     
       - uses: actions/checkout@v3
 
@@ -33,7 +34,7 @@ jobs:
 
       - name: Deploy
         run: |
-          git config --global --add safe.directory /__w/packages/packages
+          git config --global --add safe.directory ${GITHUB_WORKSPACE}
           git add *.html
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
