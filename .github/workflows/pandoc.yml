@@ -12,7 +12,9 @@ jobs:
     name: Render documents
     
     runs-on: ubuntu-22.04
-    container: ms609/pandoc
+    container: 
+      image: ms609/pandoc
+      options: --user-root
 
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
@@ -22,11 +24,9 @@ jobs:
         run: |
           apt update
           apt install -y git
-          git --version
-          
+          git --version      
     
       - uses: actions/checkout@v3
-        repository: ms609/packages
 
       - name: Render html
         run: |
