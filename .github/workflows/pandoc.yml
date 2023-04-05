@@ -1,0 +1,37 @@
+name: pandoc
+
+on:
+  push:
+    paths:
+      - "**pandoc.yml"
+      - "**.md"
+      - "!README.md"
+
+jobs:
+  render-output:
+    name: Render documents
+    
+    runs-on: ubuntu-22.04
+    container: ms609/pandoc
+
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Render html
+        run: |
+          pandoc CONTRIBUTING.md -o CONTRIBUTING.html
+          pandoc CODE_OF_CONDUCT.md -o CODE_OF_CONDUCT.html
+
+      - name: Deploy
+        run: |
+          git config --global --add safe.directory "/__w/larva/larva"
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add *.html
+          git diff-index --quiet HEAD || git commit -m "Render output files"
+          git fetch
+          git pull --ff-only
+          git push
