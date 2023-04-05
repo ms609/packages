@@ -27,9 +27,8 @@ jobs:
 
       - name: Deploy
         run: |
-          dir
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
           git add *.html
           git diff-index --quiet HEAD || git commit -m "Render output files"
           git fetch
