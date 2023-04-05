@@ -21,9 +21,6 @@ jobs:
       - name: Update git
         run: |
           git --version      
-          apt-get update
-          apt-get install -y git
-          git --version
     
       - uses: actions/checkout@v3
 
