@@ -27,7 +27,7 @@ jobs:
 
       - name: Deploy
         run: |
-          git config --global --add safe.directory "/__w/larva/larva"
+          dir
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add *.html
