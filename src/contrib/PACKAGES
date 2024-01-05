@@ -1,12 +1,24 @@
 Package: ape
 Version: 5.5-2
 Depends: R (>= 3.2.0)
-Imports: nlme, lattice, graphics, methods, stats, tools, utils, parallel,
-        Rcpp (>= 0.12.0)
+Imports: nlme, lattice, graphics, methods, stats, tools, utils, parallel, Rcpp
+         (>= 0.12.0)
 LinkingTo: Rcpp
 Suggests: gee, expm, igraph, phangorn, testthat (>= 3.0), vdiffr (>= 1.0)
 License: GPL-2 | GPL-3
 MD5sum: d93f7ab16c66fa96a713a2e4ebb2cd1d
+NeedsCompilation: yes
+
+Package: BigTreeTools
+Version: 1.10.0.9000
+Depends: R (>= 3.4.0), ape (>= 5.6),
+Imports: bit64, lifecycle, colorspace, fastmatch (>= 1.1.3), methods, PlotTools,
+         RCurl, R.cache, Rdpack (>= 2.3),
+LinkingTo: Rcpp
+Suggests: spelling, knitr, phangorn (>= 2.2.1), purrr, Rcpp (>= 1.0.8), rlang,
+         rmarkdown, testthat (>= 3.0), vdiffr (>= 1.0.0),
+License: GPL (>= 3)
+MD5sum: db6f69ddf550bcdff66b410e3d41e7c2
 NeedsCompilation: yes
 
 Package: moments
@@ -28,7 +40,7 @@ Package: phangorn
 Version: 2.6.0.0
 Depends: R (>= 3.6.0), ape (>= 5.0)
 Imports: quadprog, igraph (>= 1.0), Matrix, parallel, methods, utils, stats,
-        graphics, grDevices, fastmatch, magrittr, Rcpp (>= 0.12.0)
+         graphics, grDevices, fastmatch, magrittr, Rcpp (>= 0.12.0)
 LinkingTo: Rcpp
 Suggests: tinytest, seqinr, xtable, rgl, knitr, rmarkdown, Biostrings
 License: GPL (>= 2)
@@ -48,9 +60,9 @@ NeedsCompilation: yes
 Package: Rogue
 Version: 1.0.0.9005
 Depends: R (>= 3.5.0)
-Imports: ape (>= 5.0), cli (>= 3.0), fastmatch, grDevices, matrixStats,
-        Rdpack (>= 0.7), Rfast, stats, TreeDist (>= 2.1.1), TreeTools (>=
-        1.4.5.9000), utils,
+Imports: ape (>= 5.0), cli (>= 3.0), fastmatch, grDevices, matrixStats, Rdpack
+         (>= 0.7), Rfast, stats, TreeDist (>= 2.1.1), TreeTools (>= 1.4.5.9000),
+         utils,
 Suggests: testthat,
 License: GPL (>= 3)
 MD5sum: 7fd4aa0abcae5f514a52cf9ace64e848
@@ -61,7 +73,7 @@ Version: 2.1.0
 Depends: R (>= 3.1.0)
 Imports: digest (>= 0.6.8), jsonlite, shiny (>= 1.0.0)
 Suggests: htmltools (>= 0.2.9), knitr (>= 1.7), rmarkdown, shinyAce,
-        shinydisconnect, testthat (>= 0.9.1)
+         shinydisconnect, testthat (>= 0.9.1)
 License: MIT + file LICENSE
 MD5sum: 23479086c139ba2d7d00c557f1e8895d
 NeedsCompilation: no
@@ -91,7 +103,7 @@ Version: 2.1.0
 Depends: R (>= 3.2.0)
 Imports: shiny, sp, viridisLite,
 Suggests: colourpicker, knitr, readxl, rmarkdown, shinyjs, spelling, testthat
-        (>= 3.0), vdiffr,
+         (>= 3.0), vdiffr,
 License: GPL (>= 2)
 MD5sum: 95abc0a84c789e31d56278d48dd2a0de
 NeedsCompilation: no
@@ -99,12 +111,12 @@ NeedsCompilation: no
 Package: TreeDist
 Version: 1.0.0
 Depends: R (>= 3.4.0), stats
-Imports: ape (>= 5.0), colorspace, memoise, phangorn (>= 2.2.1), TreeTools
-        (>= 1.0.0)
+Imports: ape (>= 5.0), colorspace, memoise, phangorn (>= 2.2.1), TreeTools (>=
+         1.0.0)
 LinkingTo: Rcpp
 Suggests: bookdown, cluster, kdensity, knitr, MASS, Quartet, rmarkdown, Rcpp,
-        Rdpack, testthat, Ternary (>= 1.1.2), TreeDistData (> 0.1.0),
-        TreeSearch, vdiffr
+         Rdpack, testthat, Ternary (>= 1.1.2), TreeDistData (> 0.1.0),
+         TreeSearch, vdiffr
 License: GPL (>= 3)
 MD5sum: bcec8c3dc5f66d015dd61de859fbd0cc
 NeedsCompilation: yes
@@ -112,12 +124,12 @@ NeedsCompilation: yes
 Package: TreeDist
 Version: 1.1.0
 Depends: R (>= 3.4.0), stats
-Imports: ape (>= 5.0), colorspace, memoise, phangorn (>= 2.2.1), TreeTools
-        (>= 1.1.0)
+Imports: ape (>= 5.0), colorspace, memoise, phangorn (>= 2.2.1), TreeTools (>=
+         1.1.0)
 LinkingTo: Rcpp
 Suggests: bookdown, cluster, kdensity, knitr, MASS, Quartet, rmarkdown, Rcpp,
-        Rdpack, testthat, Ternary (>= 1.1.2), TreeDistData (> 0.1.0),
-        TreeSearch, vdiffr
+         Rdpack, testthat, Ternary (>= 1.1.2), TreeDistData (> 0.1.0),
+         TreeSearch, vdiffr
 License: GPL (>= 3)
 MD5sum: f1629d2cd3c45e7e2a64a853ede5e06a
 NeedsCompilation: yes
@@ -126,9 +138,9 @@ Package: TreeDistData
 Version: 1.0.0
 Depends: R (>= 3.5.0)
 Imports: Quartet, TBRDist, TreeDist, TreeTools (>= 0.1.4)
-Suggests: ape, benchmarkme, binom, bookdown, colorspace, kdensity, knitr,
-        MASS, microbenchmark, phangorn (> 2.5.5), Rdpack, rmarkdown,
-        spatstat, testthat, TreeSearch (>= 0.4.0)
+Suggests: ape, benchmarkme, binom, bookdown, colorspace, kdensity, knitr, MASS,
+         microbenchmark, phangorn (> 2.5.5), Rdpack, rmarkdown, spatstat,
+         testthat, TreeSearch (>= 0.4.0)
 License: GPL (>= 3)
 MD5sum: fd6ec8ba13abd379a69f21cfa556d3a4
 NeedsCompilation: no
@@ -138,8 +150,8 @@ Version: 1.1.0
 Depends: R (>= 3.5.0)
 Imports: Quartet, TBRDist, TreeDist (> 1.0.0), TreeTools (>= 1.1.0)
 Suggests: ape, benchmarkme, binom, bookdown, colorspace, DT, kdensity, knitr,
-        MASS, microbenchmark, phangorn (>= 2.5.5), Rdpack, rmarkdown,
-        spatstat, testthat, TreeSearch (>= 0.4.0)
+         MASS, microbenchmark, phangorn (>= 2.5.5), Rdpack, rmarkdown, spatstat,
+         testthat, TreeSearch (>= 0.4.0)
 License: GPL (>= 3)
 MD5sum: 88668ec9a1b6797ef650814b7470c063
 NeedsCompilation: no
@@ -179,8 +191,7 @@ Version: 1.4.5.9007
 Depends: R (>= 3.4.0), ape (>= 5.0),
 Imports: bit64, colorspace, fastmatch, phangorn (>= 2.2.1), R.cache, Rdpack,
 LinkingTo: Rcpp
-Suggests: knitr, Rcpp, rmarkdown, shiny, testthat (>= 3.0), vdiffr (>=
-        1.0.0),
+Suggests: knitr, Rcpp, rmarkdown, shiny, testthat (>= 3.0), vdiffr (>= 1.0.0),
 License: GPL (>= 3)
 MD5sum: 60e9ffeed41a469162b284997c02d0ec
 NeedsCompilation: yes
@@ -188,11 +199,10 @@ NeedsCompilation: yes
 Package: TreeTools
 Version: 1.4.5.9107
 Depends: R (>= 3.4.0), ape (>= 5.0),
-Imports: bit64, lifecycle, colorspace, fastmatch, phangorn (>= 2.2.1),
-        R.cache, Rdpack
+Imports: bit64, lifecycle, colorspace, fastmatch, phangorn (>= 2.2.1), R.cache,
+         Rdpack
 LinkingTo: Rcpp
-Suggests: knitr, Rcpp, rmarkdown, shiny, testthat (>= 3.0), vdiffr (>=
-        1.0.0),
+Suggests: knitr, Rcpp, rmarkdown, shiny, testthat (>= 3.0), vdiffr (>= 1.0.0),
 License: GPL (>= 3)
 MD5sum: 8d1633602c31b2abc9448bb8c8743f33
 NeedsCompilation: yes
@@ -200,11 +210,11 @@ NeedsCompilation: yes
 Package: TreeTools
 Version: 1.8.0.9000
 Depends: R (>= 3.4.0), ape (>= 5.6),
-Imports: bit64, lifecycle, colorspace, fastmatch (>= 1.1.3), methods,
-        R.cache, Rdpack (>= 2.3),
+Imports: bit64, lifecycle, colorspace, fastmatch (>= 1.1.3), methods, R.cache,
+         Rdpack (>= 2.3),
 LinkingTo: Rcpp
 Suggests: spelling, knitr, phangorn (>= 2.2.1), Rcpp (>= 1.0.8), rmarkdown,
-        testthat (>= 3.0), vdiffr (>= 1.0.0),
+         testthat (>= 3.0), vdiffr (>= 1.0.0),
 License: GPL (>= 3)
 MD5sum: 50f73c512b74fc41ff85be6165c3652e
 NeedsCompilation: yes
