@@ -9,6 +9,21 @@ License: GPL-2 | GPL-3
 MD5sum: d93f7ab16c66fa96a713a2e4ebb2cd1d
 NeedsCompilation: yes
 
+Package: BigTreeDist
+Version: 2.6.3.9001
+Depends: R (>= 3.4.0), stats,
+Imports: ape (>= 5.0), cli (>= 3.0), colorspace, memoise, phangorn (>= 2.2.1),
+         Rdpack (>= 0.7), shiny, shinyjs, BigTreeTools (>= 1.7.2),
+LinkingTo: Rcpp, BigTreeTools,
+Suggests: bookdown, cluster, ggplot2, hypervolume, kdensity, knitr, MASS,
+         parallel, plotly, PlotTools, protoclust, Quartet, readxl, rmarkdown,
+         Rcpp (>= 1.0.8), rgl, Rogue, spelling, testthat (>= 3.0), Ternary (>=
+         1.1.2), TreeDistData (> 0.1.0), TreeSearch (>= 1.4.0), Umatrix, uwot,
+         vdiffr (>= 1.0.0),
+License: GPL (>= 3)
+MD5sum: 47175f05787d20f105e31df36dbe0892
+NeedsCompilation: yes
+
 Package: BigTreeTools
 Version: 1.10.0.9000
 Depends: R (>= 3.4.0), ape (>= 5.6),
