@@ -108,6 +108,16 @@ License: GPL (>= 2)
 MD5sum: 95abc0a84c789e31d56278d48dd2a0de
 NeedsCompilation: no
 
+Package: Ternary
+Version: 2.3.0
+Depends: R (>= 3.5.0)
+Imports: RcppHungarian, PlotTools (>= 0.2.0), shiny, sp, viridisLite,
+Suggests: colourpicker, knitr, readxl, rmarkdown, shinyjs, spelling, testthat
+         (>= 3.0), vdiffr,
+License: GPL (>= 2)
+MD5sum: b489619daa0aadbf72ff9fba4ad6b39e
+NeedsCompilation: no
+
 Package: TreeDist
 Version: 1.0.0
 Depends: R (>= 3.4.0), stats
