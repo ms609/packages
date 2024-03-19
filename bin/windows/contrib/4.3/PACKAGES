@@ -1,0 +1,10 @@
+Package: StratoBayes
+Version: 0.0.0.9000
+Depends: R (>= 4.0.0),
+Imports: cli (>= 3.1.0), cluster, coda, EnvStats, fda, MASS, msm, mvnfast (>=
+         0.2.7), protoclust, Rcpp (>= 1.0.8), Rdpack, Rfast, splines, stats,
+LinkingTo: Rcpp, RcppEigen (>= 0.3.3.9.1)
+Suggests: gridExtra, covr, doParallel, foreach, hdbscan, here, knitr, Matrix,
+         mcmcse, mvtnorm, rmarkdown, testthat (>= 3.0), vdiffr,
+License: file LICENSE
+Archs: x64
