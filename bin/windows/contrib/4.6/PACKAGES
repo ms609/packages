@@ -1,0 +1,6 @@
+Package: palec
+Version: 0.0.0.9000
+Depends: R (>= 3.4.0)
+Imports: moments, readxl, shiny, shinyjs, Ternary,
+Suggests: covr, testthat,
+License: GPL-3
