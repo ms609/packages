@@ -4,3 +4,4 @@ Depends: R (>= 3.4.0)
 Imports: moments, readxl, shiny, shinyjs, Ternary,
 Suggests: covr, testthat,
 License: GPL-3
+Built: R 4.6.0; ; 2025-10-13 14:28:54 UTC; windows
