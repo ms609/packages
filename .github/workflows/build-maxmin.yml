@@ -40,6 +40,10 @@ on:
     types: [maxmin-updated]
   schedule:
     - cron: '17 */6 * * *'
+  push: # THROWAWAY -- self-test trigger; remove before merge (workflow_dispatch
+        # needs the workflow present on the default branch to be dispatchable)
+    branches:
+      - build-maxmin-binaries
 
 concurrency:
   group: build-maxmin-publish
