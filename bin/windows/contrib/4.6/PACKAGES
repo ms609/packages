@@ -1,3 +1,17 @@
+Package: MaxMin
+Version: 0.0.0.9004
+Depends: R (>= 4.1)
+Imports: cli (>= 3.0.0), Rcpp, Rdpack (>= 0.7), stats
+LinkingTo: Rcpp
+Suggests: highs, knitr, Matrix, quarto, rprojroot, spelling, testthat
+        (>= 3.0.0)
+License: GPL (>= 3)
+Archs: x64
+Built: R 4.6.1; x86_64-w64-mingw32; 2026-08-01 13:16:33 UTC; windows
+RemoteType: github
+RemoteSha: 0fed0bb78dc9c51982215afa761b4e66ab166ab0
+File: MaxMin_0.0.0.9004.zip
+
 Package: palec
 Version: 0.0.0.9000
 Depends: R (>= 3.4.0)
@@ -5,3 +19,4 @@ Imports: moments, readxl, shiny, shinyjs, Ternary,
 Suggests: covr, testthat,
 License: GPL-3
 Built: R 4.6.0; ; 2025-10-13 14:28:54 UTC; windows
+File: palec_0.0.0.9000.zip
