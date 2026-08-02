@@ -6,8 +6,8 @@ LinkingTo: Rcpp
 Suggests: highs, knitr, Matrix, quarto, rprojroot, spelling, testthat
         (>= 3.0.0)
 License: GPL (>= 3)
-MD5sum: a6422935c911f10411dc5be072f7bd60
-Built: R 4.6.1; aarch64-apple-darwin23; 2026-08-02 14:01:35 UTC; unix
+MD5sum: 70c4f49e09ffa567b42197d79231c5fc
+Built: R 4.6.1; aarch64-apple-darwin23; 2026-08-02 19:39:41 UTC; unix
 RemoteType: github
 RemoteSha: 0fed0bb78dc9c51982215afa761b4e66ab166ab0
 File: MaxMin_0.0.0.9004.tgz
