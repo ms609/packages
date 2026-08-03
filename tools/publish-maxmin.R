@@ -2,11 +2,30 @@
 # Publishes the MaxMin binaries built by .github/workflows/build-maxmin.yml.
 #
 # Windows/macOS binaries go into the standard drat bin/<os>/contrib/4.6/
-# layout, with PACKAGES/.gz/.rds regenerated so normal CRAN-style repo
-# resolution finds them. Linux binaries have no such standard path (GitHub
-# Pages can't do the UA negotiation P3M uses for Linux binaries), so they're
-# published to a stable, unversioned bin/linux/<tag>/MaxMin_latest.tar.gz --
-# consumed directly by URL, not through repo resolution.
+# layout, with PACKAGES/.gz/.rds regenerated -- kept for any consumer that
+# genuinely does CRAN-style repo resolution (e.g. a plain
+# `install.packages("MaxMin")` with `Additional_repositories` set, or
+# `remotes::install_deps()`, which does read that DESCRIPTION field).
+#
+# It does NOT, however, get consumed that way by ms609/TreeSearch's own CI:
+# confirmed empirically (2026-08-03, R 4.6.1, matching TreeSearch's DESCRIPTION
+# verbatim) that `pak::pkg_deps("deps::.")` -- what
+# r-lib/actions/setup-r-dependencies actually calls -- does NOT read
+# `Additional_repositories` from DESCRIPTION at all; it only finds a package
+# hosted here if the repo URL is ALSO added to `options("repos")` directly, or
+# if the package is fetched by an explicit `url::` pak reference. So for BOTH
+# Windows and Linux, downstream CI needs a stable, unversioned URL it can name
+# directly via `url::` -- Linux for the additional, GH-Pages-can't-do-the-UA-
+# negotiation-P3M-uses reason documented below; Windows/macOS purely because
+# of the pak/Additional_repositories gap just described. Publish BOTH forms
+# for Windows/macOS: the indexed contrib/ layout (for any well-behaved
+# repo-resolving consumer) and a flat, unversioned `MaxMin_latest.<ext>`
+# alias (for `url::` consumers, which is what TreeSearch's workflow now uses,
+# same as it already did for Linux).
+#
+# Linux binaries have no indexed-repo path at all (GitHub Pages can't do the
+# UA negotiation P3M uses for Linux binaries), so they're published ONLY to
+# the stable, unversioned bin/linux/<tag>/MaxMin_latest.tar.gz form.
 #
 # Run from the repo root with the `artifacts/` directory (from
 # actions/download-artifact) present alongside it.
@@ -102,6 +121,15 @@ for (dir in artifact_dirs) {
     # from the installed DESCRIPTION.
     tools::write_PACKAGES(target_dir, type = pkg_type, verbose = TRUE,
                            fields = c("RemoteType", "RemoteSha"))
+
+    # ALSO publish a stable, unversioned alias one directory up (sibling to
+    # `contrib/`, so it never gets swept into the PACKAGES index above) for
+    # `url::` consumers -- see the header comment: repo-based resolution alone
+    # does not work for ms609/TreeSearch's CI, on any of these three OSes.
+    ext <- sub("^.*(\\.[^.]+)$", "\\1", basename(file))
+    alias_dir <- dirname(target_dir)
+    alias <- file.path(alias_dir, paste0("MaxMin_latest", ext))
+    file.copy(dest, alias, overwrite = TRUE)
   }
 
   manifest[[tag]] <- list(
