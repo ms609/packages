@@ -7,9 +7,9 @@ Suggests: highs, knitr, Matrix, quarto, rprojroot, spelling, testthat
         (>= 3.0.0)
 License: GPL (>= 3)
 Archs: x64
-Built: R 4.6.1; x86_64-w64-mingw32; 2026-08-12 07:58:17 UTC; windows
+Built: R 4.6.1; x86_64-w64-mingw32; 2026-08-12 13:54:38 UTC; windows
 RemoteType: github
-RemoteSha: 6c080d06947b489a5d847f3ea15959be3fd6d838
+RemoteSha: 7e72b94f6eb2a147562e24474b628d0fa50646da
 File: MaxMin_0.0.0.9004.zip
 
 Package: palec
