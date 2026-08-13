@@ -1,38 +1,38 @@
 {
   "macos-x86_64": {
-    "version": "0.0.0.9004",
-    "sha": "7e72b94f6eb2a147562e24474b628d0fa50646da",
-    "file": "bin/macosx/big-sur-x86_64/contrib/4.6/MaxMin_0.0.0.9004.tgz",
-    "published_at": "2026-08-12T13:56:54Z"
+    "version": "0.0.0.9006",
+    "sha": "bd6b8804bc74a8a121efbe2c20e1949ac9f73657",
+    "file": "bin/macosx/big-sur-x86_64/contrib/4.6/MaxMin_0.0.0.9006.tgz",
+    "published_at": "2026-08-13T03:07:35Z"
   },
   "macos-arm64": {
-    "version": "0.0.0.9004",
-    "sha": "7e72b94f6eb2a147562e24474b628d0fa50646da",
-    "file": "bin/macosx/big-sur-arm64/contrib/4.6/MaxMin_0.0.0.9004.tgz",
-    "published_at": "2026-08-12T13:56:54Z"
+    "version": "0.0.0.9006",
+    "sha": "bd6b8804bc74a8a121efbe2c20e1949ac9f73657",
+    "file": "bin/macosx/big-sur-arm64/contrib/4.6/MaxMin_0.0.0.9006.tgz",
+    "published_at": "2026-08-13T03:07:35Z"
   },
   "linux-aarch64-devel": {
-    "version": "0.0.0.9004",
-    "sha": "7e72b94f6eb2a147562e24474b628d0fa50646da",
+    "version": "0.0.0.9006",
+    "sha": "bd6b8804bc74a8a121efbe2c20e1949ac9f73657",
     "file": "bin/linux/aarch64-devel/MaxMin_latest.tar.gz",
-    "published_at": "2026-08-12T13:56:54Z"
+    "published_at": "2026-08-13T03:07:35Z"
   },
   "linux-aarch64-release": {
-    "version": "0.0.0.9004",
-    "sha": "7e72b94f6eb2a147562e24474b628d0fa50646da",
+    "version": "0.0.0.9006",
+    "sha": "bd6b8804bc74a8a121efbe2c20e1949ac9f73657",
     "file": "bin/linux/aarch64-release/MaxMin_latest.tar.gz",
-    "published_at": "2026-08-12T13:56:54Z"
+    "published_at": "2026-08-13T03:07:35Z"
   },
   "linux-x86_64-4.1": {
-    "version": "0.0.0.9004",
-    "sha": "7e72b94f6eb2a147562e24474b628d0fa50646da",
+    "version": "0.0.0.9006",
+    "sha": "bd6b8804bc74a8a121efbe2c20e1949ac9f73657",
     "file": "bin/linux/x86_64-4.1/MaxMin_latest.tar.gz",
-    "published_at": "2026-08-12T13:56:54Z"
+    "published_at": "2026-08-13T03:07:35Z"
   },
   "windows": {
-    "version": "0.0.0.9004",
-    "sha": "7e72b94f6eb2a147562e24474b628d0fa50646da",
-    "file": "bin/windows/contrib/4.6/MaxMin_0.0.0.9004.zip",
-    "published_at": "2026-08-12T13:56:54Z"
+    "version": "0.0.0.9006",
+    "sha": "bd6b8804bc74a8a121efbe2c20e1949ac9f73657",
+    "file": "bin/windows/contrib/4.6/MaxMin_0.0.0.9006.zip",
+    "published_at": "2026-08-13T03:07:35Z"
   }
 }

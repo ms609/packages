@@ -1,13 +1,13 @@
 Package: MaxMin
-Version: 0.0.0.9004
+Version: 0.0.0.9006
 Depends: R (>= 4.1)
 Imports: cli (>= 3.0.0), Rcpp, Rdpack (>= 0.7), stats
 LinkingTo: Rcpp
 Suggests: highs, knitr, Matrix, quarto, rprojroot, spelling, testthat
         (>= 3.0.0)
 License: GPL (>= 3)
-MD5sum: de081991495451943597feeb74792b8e
-Built: R 4.6.1; x86_64-apple-darwin20; 2026-08-12 13:54:21 UTC; unix
+MD5sum: d649f51e66f872b4c05864a01714a56d
+Built: R 4.6.1; x86_64-apple-darwin20; 2026-08-13 03:05:38 UTC; unix
 RemoteType: github
-RemoteSha: 7e72b94f6eb2a147562e24474b628d0fa50646da
-File: MaxMin_0.0.0.9004.tgz
+RemoteSha: bd6b8804bc74a8a121efbe2c20e1949ac9f73657
+File: MaxMin_0.0.0.9006.tgz
