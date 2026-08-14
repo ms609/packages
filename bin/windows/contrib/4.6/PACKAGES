@@ -1,5 +1,5 @@
 Package: MaxMin
-Version: 0.0.0.9006
+Version: 0.0.0.9010
 Depends: R (>= 4.1)
 Imports: cli (>= 3.0.0), Rcpp, Rdpack (>= 0.7), stats
 LinkingTo: Rcpp
@@ -7,10 +7,10 @@ Suggests: highs, knitr, Matrix, quarto, rprojroot, spelling, testthat
         (>= 3.0.0)
 License: GPL (>= 3)
 Archs: x64
-Built: R 4.6.1; x86_64-w64-mingw32; 2026-08-14 07:55:34 UTC; windows
+Built: R 4.6.1; x86_64-w64-mingw32; 2026-08-14 13:49:17 UTC; windows
 RemoteType: github
-RemoteSha: 1087adb735fa62aed9a14efe7f82d64828680508
-File: MaxMin_0.0.0.9006.zip
+RemoteSha: 53262a78f134d61d6a1652bfac2cf0564725f8d4
+File: MaxMin_0.0.0.9010.zip
 
 Package: palec
 Version: 0.0.0.9000
