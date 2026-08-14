@@ -1,38 +1,38 @@
 {
   "macos-x86_64": {
     "version": "0.0.0.9006",
-    "sha": "0215450643d444f6d9b35b87300e610fbbfac05b",
+    "sha": "1087adb735fa62aed9a14efe7f82d64828680508",
     "file": "bin/macosx/big-sur-x86_64/contrib/4.6/MaxMin_0.0.0.9006.tgz",
-    "published_at": "2026-08-14T02:54:41Z"
+    "published_at": "2026-08-14T07:57:12Z"
   },
   "macos-arm64": {
     "version": "0.0.0.9006",
-    "sha": "0215450643d444f6d9b35b87300e610fbbfac05b",
+    "sha": "1087adb735fa62aed9a14efe7f82d64828680508",
     "file": "bin/macosx/big-sur-arm64/contrib/4.6/MaxMin_0.0.0.9006.tgz",
-    "published_at": "2026-08-14T02:54:41Z"
+    "published_at": "2026-08-14T07:57:12Z"
   },
   "linux-aarch64-devel": {
     "version": "0.0.0.9006",
-    "sha": "0215450643d444f6d9b35b87300e610fbbfac05b",
+    "sha": "1087adb735fa62aed9a14efe7f82d64828680508",
     "file": "bin/linux/aarch64-devel/MaxMin_latest.tar.gz",
-    "published_at": "2026-08-14T02:54:41Z"
+    "published_at": "2026-08-14T07:57:12Z"
   },
   "linux-aarch64-release": {
     "version": "0.0.0.9006",
-    "sha": "0215450643d444f6d9b35b87300e610fbbfac05b",
+    "sha": "1087adb735fa62aed9a14efe7f82d64828680508",
     "file": "bin/linux/aarch64-release/MaxMin_latest.tar.gz",
-    "published_at": "2026-08-14T02:54:41Z"
+    "published_at": "2026-08-14T07:57:13Z"
   },
   "linux-x86_64-4.1": {
     "version": "0.0.0.9006",
-    "sha": "0215450643d444f6d9b35b87300e610fbbfac05b",
+    "sha": "1087adb735fa62aed9a14efe7f82d64828680508",
     "file": "bin/linux/x86_64-4.1/MaxMin_latest.tar.gz",
-    "published_at": "2026-08-14T02:54:41Z"
+    "published_at": "2026-08-14T07:57:13Z"
   },
   "windows": {
     "version": "0.0.0.9006",
-    "sha": "0215450643d444f6d9b35b87300e610fbbfac05b",
+    "sha": "1087adb735fa62aed9a14efe7f82d64828680508",
     "file": "bin/windows/contrib/4.6/MaxMin_0.0.0.9006.zip",
-    "published_at": "2026-08-14T02:54:41Z"
+    "published_at": "2026-08-14T07:57:13Z"
   }
 }
