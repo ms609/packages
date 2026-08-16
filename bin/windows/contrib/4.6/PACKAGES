@@ -7,7 +7,7 @@ Suggests: highs, knitr, Matrix, quarto, rprojroot, spelling, testthat
         (>= 3.0.0)
 License: GPL (>= 3)
 Archs: x64
-Built: R 4.6.1; x86_64-w64-mingw32; 2026-08-15 18:51:47 UTC; windows
+Built: R 4.6.1; x86_64-w64-mingw32; 2026-08-16 02:02:21 UTC; windows
 RemoteType: github
 RemoteSha: 4b193c62e6d1f1084ee0ef46fddb2b53491b5d43
 File: MaxMin_0.0.0.9011.zip
