@@ -1,48 +1,48 @@
-# Builds and publishes prebuilt MaxMin (github.com/ms609/MaxMin) binaries so
+# Builds and publishes prebuilt Coreset (github.com/ms609/Coreset) binaries so
 # downstream CI -- e.g. ms609/TreeSearch -- doesn't pay to compile it from
-# source on every run. MaxMin isn't on CRAN.
+# source on every run. Coreset isn't on CRAN.
 #
 # Windows/macOS binaries go into the standard drat bin/<os>/contrib/<Rver>/
 # layout. A consuming package resolves them automatically via a normal CRAN-
 # like repo lookup, once its DESCRIPTION carries
 # `Additional_repositories: https://ms609.github.io/packages` and does NOT
-# also list a `Remotes: ms609/MaxMin` entry (Remotes always wins over a repo
+# also list a `Remotes: ms609/Coreset` entry (Remotes always wins over a repo
 # binary in pak/remotes resolution).
 #
 # GitHub Pages can't do the User-Agent negotiation Posit Package Manager uses
 # to serve Linux binaries from src/contrib, so Linux binaries are published
-# to a stable, UNVERSIONED bin/linux/<tag>/MaxMin_latest.tar.gz URL instead --
+# to a stable, UNVERSIONED bin/linux/<tag>/Coreset_latest.tar.gz URL instead --
 # consumed via a pinned `url::` pak ref in the downstream workflow. Because
 # the URL has no version/commit in it, downstream workflows never need
-# editing when MaxMin changes; this workflow just keeps the URL's content
+# editing when Coreset changes; this workflow just keeps the URL's content
 # current. (A version-pinned URL -- the pattern already used for `highs` in
 # TreeSearch's workflow -- is right for pinning a known-good release, but
-# wrong here: MaxMin is a moving dev dependency, and the whole point is to
-# never require a downstream commit on every MaxMin change.)
+# wrong here: Coreset is a moving dev dependency, and the whole point is to
+# never require a downstream commit on every Coreset change.)
 #
 # Freshness: runs on a schedule (every 6h) plus workflow_dispatch. Also
-# accepts repository_dispatch (type: maxmin-updated) for immediate refresh,
-# for if ms609/MaxMin is ever given a PAT to fire it -- that's a latency
+# accepts repository_dispatch (type: coreset-updated) for immediate refresh,
+# for if ms609/Coreset is ever given a PAT to fire it -- that's a latency
 # nicety, not required for correctness; the schedule alone bounds staleness
 # to 6h.
 #
 # Every published binary has its source commit recorded in the package's
 # DESCRIPTION (RemoteType/RemoteSha etc., matching what `remotes`/`pak` set
 # when installing straight from GitHub) so a stale artefact is auditable via
-# `packageDescription("MaxMin")$RemoteSha`, and `manifest.json` at the repo
+# `packageDescription("Coreset")$RemoteSha`, and `manifest.json` at the repo
 # root records the same per published leg for humans.
 
-name: build-maxmin
+name: build-coreset
 
 on:
   workflow_dispatch:
   repository_dispatch:
-    types: [maxmin-updated]
+    types: [coreset-updated]
   schedule:
     - cron: '17 */6 * * *'
 
 concurrency:
-  group: build-maxmin-publish
+  group: build-coreset-publish
   cancel-in-progress: false
 
 jobs:
@@ -75,30 +75,30 @@ jobs:
     runs-on: ${{ matrix.os }}
     name: build (${{ matrix.os }}, R ${{ matrix.r }})
     steps:
-      - name: Checkout MaxMin
+      - name: Checkout Coreset
         uses: actions/checkout@v6
         with:
-          repository: ms609/MaxMin
-          path: MaxMin
+          repository: ms609/Coreset
+          path: Coreset
 
       - name: Record source commit
         id: sha
         shell: bash
-        run: echo "sha=$(git -C MaxMin rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+        run: echo "sha=$(git -C Coreset rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
       - name: Stamp DESCRIPTION with remote metadata
         shell: bash
         # Mirrors the fields `remotes`/`pak` set on a GitHub install, so
-        # packageDescription("MaxMin")$RemoteSha reveals the exact commit
+        # packageDescription("Coreset")$RemoteSha reveals the exact commit
         # baked into this binary -- the point being that a stale artefact
         # is always auditable even though the published filename is not
         # version-qualified.
         run: |
-          cd MaxMin
+          cd Coreset
           {
             echo "RemoteType: github"
             echo "RemoteHost: api.github.com"
-            echo "RemoteRepo: MaxMin"
+            echo "RemoteRepo: Coreset"
             echo "RemoteUsername: ms609"
             echo "RemoteRef: HEAD"
             echo "RemoteSha: ${{ steps.sha.outputs.sha }}"
@@ -113,17 +113,17 @@ jobs:
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
           needs: build
-          working-directory: MaxMin
+          working-directory: Coreset
 
       - name: Build binary package
         shell: bash
         run: |
           set -euo pipefail
-          SRC="$(pwd)/MaxMin"
+          SRC="$(pwd)/Coreset"
           TMPBUILD=$(mktemp -d)
           cd "$TMPBUILD"
           R CMD build --no-build-vignettes --no-manual --no-resave-data "$SRC"
-          SOURCE_TARBALL=$(ls MaxMin_*.tar.gz)
+          SOURCE_TARBALL=$(ls Coreset_*.tar.gz)
           # R CMD INSTALL --build produces the platform binary alongside the
           # source tarball: a .zip on Windows, a .tgz on macOS, and on Linux
           # a binary-format <pkg>_<version>_R_<platform>.tar.gz (a tar of the
@@ -132,11 +132,11 @@ jobs:
           # compilation on the consuming side). On Linux the binary's name
           # differs from the source tarball's only by the "_R_<platform>"
           # suffix, so delete the source tarball afterwards to leave exactly
-          # one MaxMin_*.tar.gz behind for the upload step.
+          # one Coreset_*.tar.gz behind for the upload step.
           R CMD INSTALL --build "$SOURCE_TARBALL"
           rm -f "$SOURCE_TARBALL"
           mkdir -p "$GITHUB_WORKSPACE/out"
-          for f in MaxMin_*.zip MaxMin_*.tgz MaxMin_*.tar.gz; do
+          for f in Coreset_*.zip Coreset_*.tgz Coreset_*.tar.gz; do
             [ -e "$f" ] && cp "$f" "$GITHUB_WORKSPACE/out/"
           done
           ls -la "$GITHUB_WORKSPACE/out/"
@@ -144,7 +144,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: maxmin-${{ matrix.os }}-r${{ matrix.r }}
+          name: coreset-${{ matrix.os }}-r${{ matrix.r }}
           path: out/*
           retention-days: 1
 
@@ -169,7 +169,7 @@ jobs:
         run: Rscript -e 'install.packages("jsonlite", repos = "https://cloud.r-project.org")'
 
       - name: Publish binaries and update manifest
-        run: Rscript tools/publish-maxmin.R
+        run: Rscript tools/publish-coreset.R
 
       - name: Commit and push
         run: |
@@ -177,7 +177,7 @@ jobs:
           git config --local user.name "GitHub Actions"
           git add bin manifest.json
           git diff --cached --quiet && { echo "No changes to publish."; exit 0; }
-          git commit -m "MaxMin: refresh prebuilt binaries"
+          git commit -m "Coreset: refresh prebuilt binaries"
           git fetch
           git pull --rebase
           git push
