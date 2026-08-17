@@ -1,3 +1,17 @@
+Package: Coreset
+Version: 0.0.0.9000
+Depends: R (>= 4.1)
+Imports: cli (>= 3.0.0), Rcpp, Rdpack (>= 0.7), stats
+LinkingTo: Rcpp
+Suggests: highs, knitr, Matrix, quarto, rprojroot, spelling, testthat
+        (>= 3.0.0)
+License: GPL (>= 3)
+MD5sum: 4a8be9d4b2f70084613df5031ea3f345
+Built: R 4.6.1; x86_64-apple-darwin20; 2026-08-17 12:53:07 UTC; unix
+RemoteType: github
+RemoteSha: 172ec096a25a4ed991a53a3d3cbd9b4e7e494bef
+File: Coreset_0.0.0.9000.tgz
+
 Package: MaxMin
 Version: 0.0.0.9011
 Depends: R (>= 4.1)
