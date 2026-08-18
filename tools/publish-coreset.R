@@ -1,10 +1,10 @@
 #!/usr/bin/env Rscript
-# Publishes the MaxMin binaries built by .github/workflows/build-maxmin.yml.
+# Publishes the Coreset binaries built by .github/workflows/build-coreset.yml.
 #
 # Windows/macOS binaries go into the standard drat bin/<os>/contrib/4.6/
 # layout, with PACKAGES/.gz/.rds regenerated -- kept for any consumer that
 # genuinely does CRAN-style repo resolution (e.g. a plain
-# `install.packages("MaxMin")` with `Additional_repositories` set, or
+# `install.packages("Coreset")` with `Additional_repositories` set, or
 # `remotes::install_deps()`, which does read that DESCRIPTION field).
 #
 # It does NOT, however, get consumed that way by ms609/TreeSearch's own CI:
@@ -19,13 +19,13 @@
 # negotiation-P3M-uses reason documented below; Windows/macOS purely because
 # of the pak/Additional_repositories gap just described. Publish BOTH forms
 # for Windows/macOS: the indexed contrib/ layout (for any well-behaved
-# repo-resolving consumer) and a flat, unversioned `MaxMin_latest.<ext>`
+# repo-resolving consumer) and a flat, unversioned `Coreset_latest.<ext>`
 # alias (for `url::` consumers, which is what TreeSearch's workflow now uses,
 # same as it already did for Linux).
 #
 # Linux binaries have no indexed-repo path at all (GitHub Pages can't do the
 # UA negotiation P3M uses for Linux binaries), so they're published ONLY to
-# the stable, unversioned bin/linux/<tag>/MaxMin_latest.tar.gz form.
+# the stable, unversioned bin/linux/<tag>/Coreset_latest.tar.gz form.
 #
 # Run from the repo root with the `artifacts/` directory (from
 # actions/download-artifact) present alongside it.
@@ -42,7 +42,7 @@ read_description_field <- function(file, field) {
   } else {
     utils::untar(file, exdir = tmp)
   }
-  desc_path <- file.path(tmp, "MaxMin", "DESCRIPTION")
+  desc_path <- file.path(tmp, "Coreset", "DESCRIPTION")
   if (!file.exists(desc_path)) {
     stop("DESCRIPTION not found after extracting ", file)
   }
@@ -60,14 +60,14 @@ for (dir in artifact_dirs) {
   stopifnot(length(files) == 1)
   file <- files[1]
 
-  # `name` is `maxmin-<os>-r<rversion>`, matching the build workflow's matrix
-  # exactly -- kept in lockstep with .github/workflows/build-maxmin.yml.
-  is_windows     <- grepl("^maxmin-windows-latest-", name)
-  is_macos_arm   <- grepl("^maxmin-macOS-latest-", name)
-  is_macos_intel <- grepl("^maxmin-macos-15-intel-", name)
-  is_linux_arm_release <- grepl("^maxmin-ubuntu-24\\.04-arm-rrelease$", name)
-  is_linux_x86_41      <- grepl("^maxmin-ubuntu-24\\.04-r4\\.1$", name)
-  is_linux_arm_devel   <- grepl("^maxmin-ubuntu-24\\.04-arm-rdevel$", name)
+  # `name` is `coreset-<os>-r<rversion>`, matching the build workflow's matrix
+  # exactly -- kept in lockstep with .github/workflows/build-coreset.yml.
+  is_windows     <- grepl("^coreset-windows-latest-", name)
+  is_macos_arm   <- grepl("^coreset-macOS-latest-", name)
+  is_macos_intel <- grepl("^coreset-macos-15-intel-", name)
+  is_linux_arm_release <- grepl("^coreset-ubuntu-24\\.04-arm-rrelease$", name)
+  is_linux_x86_41      <- grepl("^coreset-ubuntu-24\\.04-r4\\.1$", name)
+  is_linux_arm_devel   <- grepl("^coreset-ubuntu-24\\.04-arm-rdevel$", name)
 
   if (is_windows) {
     target_dir <- "bin/windows/contrib/4.6"
@@ -104,13 +104,13 @@ for (dir in artifact_dirs) {
 
   if (is.na(pkg_type)) {
     # Linux: single stable filename, always overwritten -- no repo index.
-    dest <- file.path(target_dir, "MaxMin_latest.tar.gz")
+    dest <- file.path(target_dir, "Coreset_latest.tar.gz")
     file.copy(file, dest, overwrite = TRUE)
   } else {
-    # Windows/macOS: remove any previous MaxMin_* file(s) so exactly one
+    # Windows/macOS: remove any previous Coreset_* file(s) so exactly one
     # (the current) version is ever indexed, then let write_PACKAGES()
     # rebuild PACKAGES/.gz/.rds for the whole directory.
-    old <- list.files(target_dir, pattern = "^MaxMin_.*\\.(zip|tgz)$",
+    old <- list.files(target_dir, pattern = "^Coreset_.*\\.(zip|tgz)$",
                        full.names = TRUE)
     unlink(old)
     dest <- file.path(target_dir, basename(file))
@@ -127,8 +127,12 @@ for (dir in artifact_dirs) {
     # `url::` consumers -- see the header comment: repo-based resolution alone
     # does not work for ms609/TreeSearch's CI, on any of these three OSes.
     ext <- sub("^.*(\\.[^.]+)$", "\\1", basename(file))
-    alias_dir <- dirname(target_dir)
-    alias <- file.path(alias_dir, paste0("MaxMin_latest", ext))
+    # target_dir is bin/<os>/contrib/<Rver>, so reaching bin/<os>/ takes TWO
+    # levels. A single dirname() lands in contrib/ itself -- invisible to the
+    # url:: consumers documented above, and inside the very directory tree the
+    # alias is meant to sit outside.
+    alias_dir <- dirname(dirname(target_dir))
+    alias <- file.path(alias_dir, paste0("Coreset_latest", ext))
     file.copy(dest, alias, overwrite = TRUE)
   }
 

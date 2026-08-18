@@ -1,13 +1,27 @@
-Package: MaxMin
-Version: 0.0.0.9004
+Package: Coreset
+Version: 0.0.0.9000
 Depends: R (>= 4.1)
 Imports: cli (>= 3.0.0), Rcpp, Rdpack (>= 0.7), stats
 LinkingTo: Rcpp
 Suggests: highs, knitr, Matrix, quarto, rprojroot, spelling, testthat
         (>= 3.0.0)
 License: GPL (>= 3)
-MD5sum: a468bb7da763ccb40859b1a4f1488ba1
-Built: R 4.6.1; aarch64-apple-darwin23; 2026-08-04 14:44:24 UTC; unix
+MD5sum: 52ac8a906e04b4a369002ba73a568e80
+Built: R 4.6.1; aarch64-apple-darwin23; 2026-08-18 06:05:18 UTC; unix
 RemoteType: github
-RemoteSha: 0fed0bb78dc9c51982215afa761b4e66ab166ab0
-File: MaxMin_0.0.0.9004.tgz
+RemoteSha: 172ec096a25a4ed991a53a3d3cbd9b4e7e494bef
+File: Coreset_0.0.0.9000.tgz
+
+Package: MaxMin
+Version: 0.0.0.9011
+Depends: R (>= 4.1)
+Imports: cli (>= 3.0.0), Rcpp, Rdpack (>= 0.7), stats
+LinkingTo: Rcpp
+Suggests: highs, knitr, Matrix, quarto, rprojroot, spelling, testthat
+        (>= 3.0.0)
+License: GPL (>= 3)
+MD5sum: a06274fc8c1e54d66b181987f7d1cc9d
+Built: R 4.6.1; aarch64-apple-darwin23; 2026-08-17 07:20:45 UTC; unix
+RemoteType: github
+RemoteSha: 4b193c62e6d1f1084ee0ef46fddb2b53491b5d43
+File: MaxMin_0.0.0.9011.tgz
