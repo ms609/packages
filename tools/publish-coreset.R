@@ -127,7 +127,11 @@ for (dir in artifact_dirs) {
     # `url::` consumers -- see the header comment: repo-based resolution alone
     # does not work for ms609/TreeSearch's CI, on any of these three OSes.
     ext <- sub("^.*(\\.[^.]+)$", "\\1", basename(file))
-    alias_dir <- dirname(target_dir)
+    # target_dir is bin/<os>/contrib/<Rver>, so reaching bin/<os>/ takes TWO
+    # levels. A single dirname() lands in contrib/ itself -- invisible to the
+    # url:: consumers documented above, and inside the very directory tree the
+    # alias is meant to sit outside.
+    alias_dir <- dirname(dirname(target_dir))
     alias <- file.path(alias_dir, paste0("Coreset_latest", ext))
     file.copy(dest, alias, overwrite = TRUE)
   }
