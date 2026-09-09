@@ -7,9 +7,9 @@ Suggests: highs, knitr, Matrix, quarto, rprojroot, spelling, testthat
         (>= 3.0.0)
 License: GPL (>= 3)
 Archs: x64
-Built: R 4.6.1; x86_64-w64-mingw32; 2026-09-09 16:47:24 UTC; windows
+Built: R 4.6.1; x86_64-w64-mingw32; 2026-09-09 21:03:31 UTC; windows
 RemoteType: github
-RemoteSha: 2c38c86d0c7fb07c62d5788832fe0a9ce010046c
+RemoteSha: 6db7c2fa122160f6a57c3809312b9de581e295b3
 File: Coreset_1.0.0.zip
 
 Package: MaxMin
