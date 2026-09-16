@@ -1,5 +1,5 @@
 Package: Coreset
-Version: 1.0.0
+Version: 1.0.0.9000
 Depends: R (>= 4.1)
 Imports: cli (>= 3.0.0), Rcpp, Rdpack (>= 0.7), stats
 LinkingTo: Rcpp
@@ -7,10 +7,10 @@ Suggests: highs, knitr, Matrix, quarto, rprojroot, spelling, testthat
         (>= 3.0.0)
 License: GPL (>= 3)
 Archs: x64
-Built: R 4.6.1; x86_64-w64-mingw32; 2026-09-16 04:59:39 UTC; windows
+Built: R 4.6.1; x86_64-w64-mingw32; 2026-09-16 11:48:35 UTC; windows
 RemoteType: github
-RemoteSha: 5832a5ee8c878da4820a8a0fa47710e5b806a403
-File: Coreset_1.0.0.zip
+RemoteSha: d7dc95ba9ba56b63c1cb9f63ccde783218482330
+File: Coreset_1.0.0.9000.zip
 
 Package: MaxMin
 Version: 0.0.0.9011
