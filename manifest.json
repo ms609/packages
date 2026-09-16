@@ -3,36 +3,36 @@
     "version": "1.0.0.9003",
     "sha": "60d5e9fdcbd830e9097cc5edca0b505124f50221",
     "file": "bin/macosx/big-sur-x86_64/contrib/4.6/Coreset_1.0.0.9003.tgz",
-    "published_at": "2026-09-16T17:14:02Z"
+    "published_at": "2026-09-16T21:28:42Z"
   },
   "macos-arm64": {
     "version": "1.0.0.9003",
     "sha": "60d5e9fdcbd830e9097cc5edca0b505124f50221",
     "file": "bin/macosx/big-sur-arm64/contrib/4.6/Coreset_1.0.0.9003.tgz",
-    "published_at": "2026-09-16T17:14:02Z"
+    "published_at": "2026-09-16T21:28:42Z"
   },
   "linux-aarch64-devel": {
     "version": "1.0.0.9003",
     "sha": "60d5e9fdcbd830e9097cc5edca0b505124f50221",
     "file": "bin/linux/aarch64-devel/Coreset_latest.tar.gz",
-    "published_at": "2026-09-16T17:14:02Z"
+    "published_at": "2026-09-16T21:28:42Z"
   },
   "linux-aarch64-release": {
     "version": "1.0.0.9003",
     "sha": "60d5e9fdcbd830e9097cc5edca0b505124f50221",
     "file": "bin/linux/aarch64-release/Coreset_latest.tar.gz",
-    "published_at": "2026-09-16T17:14:02Z"
+    "published_at": "2026-09-16T21:28:42Z"
   },
   "linux-x86_64-4.1": {
     "version": "1.0.0.9003",
     "sha": "60d5e9fdcbd830e9097cc5edca0b505124f50221",
     "file": "bin/linux/x86_64-4.1/Coreset_latest.tar.gz",
-    "published_at": "2026-09-16T17:14:02Z"
+    "published_at": "2026-09-16T21:28:42Z"
   },
   "windows": {
     "version": "1.0.0.9003",
     "sha": "60d5e9fdcbd830e9097cc5edca0b505124f50221",
     "file": "bin/windows/contrib/4.6/Coreset_1.0.0.9003.zip",
-    "published_at": "2026-09-16T17:14:02Z"
+    "published_at": "2026-09-16T21:28:42Z"
   }
 }
