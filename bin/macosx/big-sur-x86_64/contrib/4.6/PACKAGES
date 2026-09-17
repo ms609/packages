@@ -6,8 +6,8 @@ LinkingTo: Rcpp
 Suggests: highs, knitr, Matrix, quarto, rprojroot, spelling, testthat
         (>= 3.0.0)
 License: GPL (>= 3)
-MD5sum: 39f26b6aac90c1fe2c96514efb2fecff
-Built: R 4.6.1; x86_64-apple-darwin20; 2026-09-16 21:26:23 UTC; unix
+MD5sum: da79bfa6aaba7bf05bcc7b6163b599c5
+Built: R 4.6.1; x86_64-apple-darwin20; 2026-09-17 05:02:17 UTC; unix
 RemoteType: github
 RemoteSha: 60d5e9fdcbd830e9097cc5edca0b505124f50221
 File: Coreset_1.0.0.9003.tgz
