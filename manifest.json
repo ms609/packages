@@ -1,38 +1,38 @@
 {
   "macos-x86_64": {
-    "version": "1.0.0.9003",
-    "sha": "cae8f85fc81edfc4a4392ac30d4d427354597d2e",
-    "file": "bin/macosx/big-sur-x86_64/contrib/4.6/Coreset_1.0.0.9003.tgz",
-    "published_at": "2026-09-24T05:06:16Z"
+    "version": "1.0.0.9004",
+    "sha": "ebd890df1d98192335df03532884f07b41b69a39",
+    "file": "bin/macosx/big-sur-x86_64/contrib/4.6/Coreset_1.0.0.9004.tgz",
+    "published_at": "2026-09-24T12:02:53Z"
   },
   "macos-arm64": {
-    "version": "1.0.0.9003",
-    "sha": "cae8f85fc81edfc4a4392ac30d4d427354597d2e",
-    "file": "bin/macosx/big-sur-arm64/contrib/4.6/Coreset_1.0.0.9003.tgz",
-    "published_at": "2026-09-24T05:06:16Z"
+    "version": "1.0.0.9004",
+    "sha": "ebd890df1d98192335df03532884f07b41b69a39",
+    "file": "bin/macosx/big-sur-arm64/contrib/4.6/Coreset_1.0.0.9004.tgz",
+    "published_at": "2026-09-24T12:02:53Z"
   },
   "linux-aarch64-devel": {
-    "version": "1.0.0.9003",
-    "sha": "cae8f85fc81edfc4a4392ac30d4d427354597d2e",
+    "version": "1.0.0.9004",
+    "sha": "ebd890df1d98192335df03532884f07b41b69a39",
     "file": "bin/linux/aarch64-devel/Coreset_latest.tar.gz",
-    "published_at": "2026-09-24T05:06:16Z"
+    "published_at": "2026-09-24T12:02:53Z"
   },
   "linux-aarch64-release": {
-    "version": "1.0.0.9003",
-    "sha": "cae8f85fc81edfc4a4392ac30d4d427354597d2e",
+    "version": "1.0.0.9004",
+    "sha": "ebd890df1d98192335df03532884f07b41b69a39",
     "file": "bin/linux/aarch64-release/Coreset_latest.tar.gz",
-    "published_at": "2026-09-24T05:06:17Z"
+    "published_at": "2026-09-24T12:02:54Z"
   },
   "linux-x86_64-4.1": {
-    "version": "1.0.0.9003",
-    "sha": "cae8f85fc81edfc4a4392ac30d4d427354597d2e",
+    "version": "1.0.0.9004",
+    "sha": "ebd890df1d98192335df03532884f07b41b69a39",
     "file": "bin/linux/x86_64-4.1/Coreset_latest.tar.gz",
-    "published_at": "2026-09-24T05:06:17Z"
+    "published_at": "2026-09-24T12:02:54Z"
   },
   "windows": {
-    "version": "1.0.0.9003",
-    "sha": "cae8f85fc81edfc4a4392ac30d4d427354597d2e",
-    "file": "bin/windows/contrib/4.6/Coreset_1.0.0.9003.zip",
-    "published_at": "2026-09-24T05:06:17Z"
+    "version": "1.0.0.9004",
+    "sha": "ebd890df1d98192335df03532884f07b41b69a39",
+    "file": "bin/windows/contrib/4.6/Coreset_1.0.0.9004.zip",
+    "published_at": "2026-09-24T12:02:54Z"
   }
 }
